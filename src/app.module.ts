@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { CategoriaModule } from './categoria/categoria.module';
 
 @Module({
   imports: [
@@ -10,10 +11,12 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       username: 'root',
       password: 'root',
       database: 'db_farmacia',
-      entities: [],
+      //entities: [Categoria],
+      autoLoadEntities: true, 
       synchronize: true,
-      logging: true,
+      //logging: true,
     }),
+    CategoriaModule
   ],
   controllers: [],
   providers: [],

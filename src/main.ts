@@ -4,7 +4,6 @@ import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  await app.listen(3000);
 
   process.env.TZ = '-03:00';
 
